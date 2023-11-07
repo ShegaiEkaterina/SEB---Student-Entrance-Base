@@ -1,0 +1,61 @@
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\bin\Debug\dtbasestudents.exe.config
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\bin\Debug\dtbasestudents.exe
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\bin\Debug\dtbasestudents.pdb
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.AssemblyReference.cache
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.SuggestedBindingRedirects.cache
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.Form1.resources
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.Properties.Resources.resources
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.GenerateResource.cache
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.CoreCompileInputs.cache
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.exe
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.pdb
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.login.resources
+E:\Алгоритмы и прог\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.loginseb.resources
+F:\dtbasestudents\dtbasestudents\bin\Debug\dtbasestudents.exe.config
+F:\dtbasestudents\dtbasestudents\bin\Debug\dtbasestudents.exe
+F:\dtbasestudents\dtbasestudents\bin\Debug\dtbasestudents.pdb
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.AssemblyReference.cache
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.SuggestedBindingRedirects.cache
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.Form1.resources
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.loginseb.resources
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.Properties.Resources.resources
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.regestrationseb.resources
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.GenerateResource.cache
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.CoreCompileInputs.cache
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.exe
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.pdb
+E:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.AssemblyReference.cache
+E:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.Form1.resources
+E:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.loginseb.resources
+E:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.Properties.Resources.resources
+E:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.regestrationseb.resources
+E:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.GenerateResource.cache
+E:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.CoreCompileInputs.cache
+E:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.exe
+E:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.pdb
+E:\dtbasestudents\dtbasestudents\bin\Debug\dtbasestudents.exe.config
+E:\dtbasestudents\dtbasestudents\bin\Debug\dtbasestudents.exe
+E:\dtbasestudents\dtbasestudents\bin\Debug\dtbasestudents.pdb
+E:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.FormAnalizingStudent.resources
+E:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.studentlistsadd.resources
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.FormAnalizingStudent.resources
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.studentlistsadd.resources
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.reportstudents.resources
+F:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.aboutSEB.resources
+D:\dtbasestudents\dtbasestudents\bin\Debug\dtbasestudents.exe.config
+D:\dtbasestudents\dtbasestudents\bin\Debug\dtbasestudents.exe
+D:\dtbasestudents\dtbasestudents\bin\Debug\dtbasestudents.pdb
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.AssemblyReference.cache
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.aboutSEB.resources
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.Form1.resources
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.FormAnalizingStudent.resources
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.loginseb.resources
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.Properties.Resources.resources
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.regestrationseb.resources
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.reportstudents.resources
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.studentlistsadd.resources
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.GenerateResource.cache
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.CoreCompileInputs.cache
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.exe
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.pdb
+D:\dtbasestudents\dtbasestudents\obj\Debug\dtbasestudents.csproj.SuggestedBindingRedirects.cache
