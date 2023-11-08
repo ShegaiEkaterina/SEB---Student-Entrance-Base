@@ -38,82 +38,11 @@ namespace dtbasestudents
                 if (!row.IsNewRow)
                 {
                     totalStudents++;
-
-                    // Получаем значение чекбоксов для разных статусов
-                    bool isPresent = false;
-                    bool isAbsent = false;
-                    bool isExcused = false;
-                    bool isSick = false;
-                    bool isFree = false;
-                    bool isRespectful = false;
-
-                    if (row.Cells[2].Value != null)
-                    {
-                        bool.TryParse(row.Cells[2].Value.ToString(), out isPresent);
-                    }
-
-                    if (row.Cells[3].Value != null)
-                    {
-                        bool.TryParse(row.Cells[3].Value.ToString(), out isAbsent);
-                    }
-
-                    if (row.Cells[4].Value != null)
-                    {
-                        bool.TryParse(row.Cells[4].Value.ToString(), out isExcused);
-                    }
-
-                    if (row.Cells[5].Value != null)
-                    {
-                        bool.TryParse(row.Cells[5].Value.ToString(), out isSick);
-                    }
-
-                    if (row.Cells[6].Value != null)
-                    {
-                        bool.TryParse(row.Cells[6].Value.ToString(), out isFree);
-                    }
-
-                    if (row.Cells[7].Value != null)
-                    {
-                        bool.TryParse(row.Cells[7].Value.ToString(), out isRespectful);
-                    }
-
-
-                    // Подсчитываем статистику
-                    if (isPresent)
-                    {
-                        totalPresent++;
-                    }
-                    if (isAbsent)
-                    {
-                        totalAbsent++;
-                    }
-                    if (isExcused)
-                    {
-                        totalExcused++;
-                    }
-                    if (isSick)
-                    {
-                        totalSick++;
-                    }
-                    if (isFree)
-                    {
-                        totalFree++;
-                    }
-                    if (isRespectful)
-                    {
-                        totalRespectful++;
-                    }
                 }
             }
 
             // Отображаем результаты на форме
             labelTotalStudents.Text = $"Всего студентов: {totalStudents}";
-            labelTotalPresent.Text = $"Присутствует: {totalPresent}";
-            labelTotalAbsent.Text = $"Отсутствует: {totalAbsent}";
-            labelTotalExcused.Text = $"Отпущен: {totalExcused}";
-            labelTotalSick.Text = $"По болезни: {totalSick}";
-            labelTotalFree.Text = $"Свободное посещение: {totalFree}";
-            labelTotalRespectful.Text = $"По уважительной причине: {totalRespectful}";
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -126,22 +55,120 @@ namespace dtbasestudents
                            "Преподаватель/Организатор:\n" +
                            "Группа/Мероприятие:\n\n" +
                            "Общая посещаемость группы/мероприятия:\n" +
-                           $"Всего студентов: {totalStudents}\n" +
-                           $"Присутствует: {totalPresent}\n" +
-                           $"Отсутствует: {totalAbsent}\n" +
-                           $"Отпущен: {totalExcused}\n" +
-                           $"По болезни: {totalSick}\n" +
-                           $"Свободное посещение: {totalFree}\n" +
-                           $"По уважительной причине: {totalRespectful}\n\n" +
-                           "Комментарии:";
+                           $"Всего студентов: {totalStudents}\n";
+
+            // Добавьте заголовок для ФИО и информации о паре
+            report += "ФИО студентов, отсутствующих или отпущенных, и информация о паре:\n";
+
+            // Создайте словарь для хранения информации о парах и именах студентов
+            Dictionary<string, List<string>> pairInfoDict = new Dictionary<string, List<string>>();
+
+            // Переберите строки в dataGridView1
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    // Получите ФИО студента из соответствующей ячейки (предположим, что ФИО находится во второй ячейке - Column2)
+                    string fullName = row.Cells["Column2"].Value as string;
+
+                    // Проверьте статусы студента на каждой паре и добавьте информацию о парах
+                    if (row.Cells["Column3"].Value as string == "Отсутствует")
+                    {
+                        string pair = "0 Пара";
+                        if (!pairInfoDict.ContainsKey(pair))
+                        {
+                            pairInfoDict[pair] = new List<string>();
+                        }
+                        pairInfoDict[pair].Add(fullName);
+                    }
+                    if (row.Cells["Column4"].Value as string == "Отсутствует")
+                    {
+                        string pair = "1 Пара";
+                        if (!pairInfoDict.ContainsKey(pair))
+                        {
+                            pairInfoDict[pair] = new List<string>();
+                        }
+                        pairInfoDict[pair].Add(fullName);
+                    }
+                    if (row.Cells["Column5"].Value as string == "Отсутствует")
+                    {
+                        string pair = "2 Пара";
+                        if (!pairInfoDict.ContainsKey(pair))
+                        {
+                            pairInfoDict[pair] = new List<string>();
+                        }
+                        pairInfoDict[pair].Add(fullName);
+                    }
+                    if (row.Cells["Column6"].Value as string == "Отсутствует")
+                    {
+                        string pair = "3 Пара";
+                        if (!pairInfoDict.ContainsKey(pair))
+                        {
+                            pairInfoDict[pair] = new List<string>();
+                        }
+                        pairInfoDict[pair].Add(fullName);
+                    }
+                    if (row.Cells["Column7"].Value as string == "Отсутствует")
+                    {
+                        string pair = "4 Пара";
+                        if (!pairInfoDict.ContainsKey(pair))
+                        {
+                            pairInfoDict[pair] = new List<string>();
+                        }
+                        pairInfoDict[pair].Add(fullName);
+                    }
+                }
+            }
+
+            // Добавьте информацию о парам и именах студентов в отчет
+            foreach (var pairInfo in pairInfoDict)
+            {
+                report += "\n" + pairInfo.Key + ":\n";
+                foreach (var studentName in pairInfo.Value)
+                {
+                    string status = "Отсутствует";
+                    string modifiedStudentName = studentName;
+                    if (studentName.EndsWith("Отпущен(а)"))
+                    {
+                        status = "Отпущен(а)";
+                        modifiedStudentName = studentName.Substring(0, studentName.Length - 11).Trim();
+                    }
+                    report += status + " " + modifiedStudentName + "\n";
+                }
+            }
+
+            // Добавьте комментарии
+            report += "\nКомментарии:";
 
             // Вставьте созданную строку в richTextBox1
             richTextBox1.Text = report;
         }
 
+        public void CopyDataFromForm1(DataGridView sourceDataGridView)
+        {
+            // Очистите dataGridView1 в reportstudents, если там уже есть данные.
+            dataGridView1.Rows.Clear();
+
+            // Скопируйте данные из sourceDataGridView в dataGridView1 в reportstudents.
+            foreach (DataGridViewRow row in sourceDataGridView.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    int rowIndex = dataGridView1.Rows.Add(row.Cells.Cast<DataGridViewCell>().Select(cell => cell.Value).ToArray());
+                }
+            }
+        }
+
         private void reportstudents_Load(object sender, EventArgs e)
         {
+            // Получите доступ к форме form1 (предположим, что она называется form1) и скопируйте данные.
+            Form1 form1 = Application.OpenForms["form1"] as Form1;
 
+            if (form1 != null)
+            {
+                // Передайте данные из dataGridView1 в reportstudents.
+                CopyDataFromForm1(form1.dataGridView1);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -150,7 +177,7 @@ namespace dtbasestudents
             DateTime selectedDate = monthCalendar1.SelectionStart;
 
             // Преобразуйте выбранную дату в строку с определенным форматом
-            string selectedDateStr = selectedDate.ToString("yyyy-MM-dd"); // Вы можете выбрать любой желаемый формат
+            string selectedDateStr = selectedDate.ToString("dd/MM/yyyy"); // Вы можете выбрать любой желаемый формат
 
             // Получите текущую позицию курсора
             int cursorPosition = richTextBox1.SelectionStart;
@@ -165,7 +192,7 @@ namespace dtbasestudents
             DateTime currentDate = DateTime.Now;
 
             // Преобразуйте текущую дату в строку с определенным форматом
-            string currentDateStr = currentDate.ToString("yyyy-MM-dd"); // Вы можете выбрать любой желаемый формат
+            string currentDateStr = currentDate.ToString("dd/MM/yyyy"); // Вы можете выбрать любой желаемый формат
 
             // Получите текущую позицию курсора
             int cursorPosition = richTextBox1.SelectionStart;
@@ -176,13 +203,7 @@ namespace dtbasestudents
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string report = $"Всего студентов: {totalStudents}\n" +
-                           $"Присутствует: {totalPresent}\n" +
-                           $"Отсутствует: {totalAbsent}\n" +
-                           $"Отпущен: {totalExcused}\n" +
-                           $"По болезни: {totalSick}\n" +
-                           $"Свободное посещение: {totalFree}\n" +
-                           $"По уважительной причине: {totalRespectful}\n\n";
+            string report = $"Всего студентов: {totalStudents}\n";
 
             // Получите текущую позицию курсора
             int cursorPosition = richTextBox1.SelectionStart;

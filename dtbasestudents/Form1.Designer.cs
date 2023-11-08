@@ -45,7 +45,6 @@
             this.menuItem6 = new System.Windows.Forms.MenuItem();
             this.menuItem7 = new System.Windows.Forms.MenuItem();
             this.menuItem12 = new System.Windows.Forms.MenuItem();
-            this.menuItem13 = new System.Windows.Forms.MenuItem();
             this.menuItem15 = new System.Windows.Forms.MenuItem();
             this.menuItem16 = new System.Windows.Forms.MenuItem();
             this.menuItem17 = new System.Windows.Forms.MenuItem();
@@ -64,14 +63,13 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -180,19 +178,12 @@
             this.menuItem12.Enabled = false;
             this.menuItem12.Index = 2;
             this.menuItem12.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem13,
             this.menuItem15});
             this.menuItem12.Text = "Отчет";
             // 
-            // menuItem13
-            // 
-            this.menuItem13.Index = 0;
-            this.menuItem13.Text = "Анализ посещаемости";
-            this.menuItem13.Click += new System.EventHandler(this.menuItem13_Click);
-            // 
             // menuItem15
             // 
-            this.menuItem15.Index = 1;
+            this.menuItem15.Index = 0;
             this.menuItem15.Text = "Сформировать отчет о посещаемости";
             this.menuItem15.Click += new System.EventHandler(this.menuItem15_Click);
             // 
@@ -211,7 +202,7 @@
             // 
             // statusBar1
             // 
-            this.statusBar1.Location = new System.Drawing.Point(0, 541);
+            this.statusBar1.Location = new System.Drawing.Point(0, 604);
             this.statusBar1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.statusBar1.Name = "statusBar1";
             this.statusBar1.Size = new System.Drawing.Size(1289, 22);
@@ -233,7 +224,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1289, 178);
+            this.panel1.Size = new System.Drawing.Size(1289, 180);
             this.panel1.TabIndex = 2;
             // 
             // label6
@@ -283,9 +274,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::dtbasestudents.Properties.Resources.profile;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -294,7 +285,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(83, 39);
+            this.label2.Location = new System.Drawing.Point(76, 39);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(703, 21);
@@ -306,7 +297,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(82, 9);
+            this.label1.Location = new System.Drawing.Point(75, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 30);
@@ -321,10 +312,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 178);
+            this.tabControl1.Location = new System.Drawing.Point(0, 180);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1289, 363);
+            this.tabControl1.Size = new System.Drawing.Size(1289, 424);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.Visible = false;
             // 
@@ -334,30 +325,28 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1281, 337);
+            this.tabPage1.Size = new System.Drawing.Size(1281, 398);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Журнал";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column2,
             this.Column3,
             this.Column4,
-            this.Column2,
             this.Column5,
             this.Column6,
             this.Column7,
-            this.Column8,
-            this.Column9});
+            this.Column8});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1275, 331);
+            this.dataGridView1.Size = new System.Drawing.Size(1275, 392);
             this.dataGridView1.TabIndex = 4;
             // 
             // Column1
@@ -366,54 +355,69 @@
             this.Column1.Name = "Column1";
             this.Column1.Width = 50;
             // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "ФИО Студентов";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 250;
+            // 
             // Column3
             // 
-            this.Column3.HeaderText = "ФИО Студентов";
+            this.Column3.HeaderText = "0 Пара";
+            this.Column3.Items.AddRange(new object[] {
+            "Присутствует",
+            "Отсутствует",
+            "Отпущен(а)"});
             this.Column3.Name = "Column3";
-            this.Column3.Width = 250;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Посещаемость";
+            this.Column4.HeaderText = "1 Пара";
+            this.Column4.Items.AddRange(new object[] {
+            "Присутствует",
+            "Отсутствует",
+            "Отпущен(а)"});
             this.Column4.Name = "Column4";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Отсуствующий";
-            this.Column2.Name = "Column2";
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Отпрошен(на)";
+            this.Column5.HeaderText = "2 Пара";
+            this.Column5.Items.AddRange(new object[] {
+            "Присутствует",
+            "Отсутствует",
+            "Отпущен(а)"});
             this.Column5.Name = "Column5";
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "По болезни";
+            this.Column6.HeaderText = "3 Пара";
+            this.Column6.Items.AddRange(new object[] {
+            "Присутствует",
+            "Отсутствует",
+            "Отпущен(а)"});
             this.Column6.Name = "Column6";
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Свободное посещение";
+            this.Column7.HeaderText = "4 Пара";
+            this.Column7.Items.AddRange(new object[] {
+            "Присутствует",
+            "Отсутствует",
+            "Отпущен(а)"});
             this.Column7.Name = "Column7";
             // 
             // Column8
             // 
-            this.Column8.HeaderText = "По уважительной причине";
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.FillWeight = 200F;
+            this.Column8.HeaderText = "Принятые меры";
             this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column9.FillWeight = 200F;
-            this.Column9.HeaderText = "Принятые меры";
-            this.Column9.Name = "Column9";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1289, 563);
+            this.ClientSize = new System.Drawing.Size(1289, 626);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusBar1);
             this.Controls.Add(this.panel1);
@@ -455,29 +459,27 @@
         private System.Windows.Forms.MenuItem menuItem4;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MenuItem menuItem12;
-        private System.Windows.Forms.MenuItem menuItem13;
         private System.Windows.Forms.MenuItem menuItem14;
         private System.Windows.Forms.MenuItem menuItem15;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.MenuItem menuItem16;
         private System.Windows.Forms.MenuItem menuItem17;
         private System.Windows.Forms.MenuItem menuItem8;
         private System.Windows.Forms.MenuItem menuItem9;
         private System.Windows.Forms.MenuItem menuItem18;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }
 

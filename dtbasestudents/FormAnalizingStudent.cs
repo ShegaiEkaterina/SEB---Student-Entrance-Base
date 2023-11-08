@@ -40,82 +40,11 @@ namespace dtbasestudents
                 if (!row.IsNewRow)
                 {
                     totalStudents++;
-
-                    // Получаем значение чекбоксов для разных статусов
-                    bool isPresent = false;
-                    bool isAbsent = false;
-                    bool isExcused = false;
-                    bool isSick = false;
-                    bool isFree = false;
-                    bool isRespectful = false;
-
-                    if (row.Cells[2].Value != null)
-                    {
-                        bool.TryParse(row.Cells[2].Value.ToString(), out isPresent);
-                    }
-
-                    if (row.Cells[3].Value != null)
-                    {
-                        bool.TryParse(row.Cells[3].Value.ToString(), out isAbsent);
-                    }
-
-                    if (row.Cells[4].Value != null)
-                    {
-                        bool.TryParse(row.Cells[4].Value.ToString(), out isExcused);
-                    }
-
-                    if (row.Cells[5].Value != null)
-                    {
-                        bool.TryParse(row.Cells[5].Value.ToString(), out isSick);
-                    }
-
-                    if (row.Cells[6].Value != null)
-                    {
-                        bool.TryParse(row.Cells[6].Value.ToString(), out isFree);
-                    }
-
-                    if (row.Cells[7].Value != null)
-                    {
-                        bool.TryParse(row.Cells[7].Value.ToString(), out isRespectful);
-                    }
-
-
-                    // Подсчитываем статистику
-                    if (isPresent)
-                    {
-                        totalPresent++;
-                    }
-                    if (isAbsent)
-                    {
-                        totalAbsent++;
-                    }
-                    if (isExcused)
-                    {
-                        totalExcused++;
-                    }
-                    if (isSick)
-                    {
-                        totalSick++;
-                    }
-                    if (isFree)
-                    {
-                        totalFree++;
-                    }
-                    if (isRespectful)
-                    {
-                        totalRespectful++;
-                    }
                 }
             }
 
             // Отображаем результаты на форме
                 labelTotalStudents.Text = $"Всего студентов: {totalStudents}";
-                labelTotalPresent.Text = $"Присутствует: {totalPresent}";
-                labelTotalAbsent.Text = $"Отсутствует: {totalAbsent}";
-                labelTotalExcused.Text = $"Отпущен: {totalExcused}";
-                labelTotalSick.Text = $"По болезни: {totalSick}";
-                labelTotalFree.Text = $"Свободное посещение: {totalFree}";
-                labelTotalRespectful.Text = $"По уважительной причине: {totalRespectful}";
         }
 
         private void DrawPieChart(Graphics g, int centerX, int centerY, int radius, float anglePresent, float angleAbsent, float angleExcused, float angleSick, float angleFree, float angleRespectful)
@@ -142,11 +71,6 @@ namespace dtbasestudents
             {
                 // Рисуем текст и числа для каждого сегмента
                 DrawSegmentLabel(g, totalStudents.ToString(), anglePresent / 2, centerX, centerY, radius, font, sf, pen);
-                DrawSegmentLabel(g, totalPresent.ToString(), anglePresent + angleAbsent / 2, centerX, centerY, radius, font, sf, pen);
-                DrawSegmentLabel(g, totalAbsent.ToString(), anglePresent + angleAbsent + angleExcused / 2, centerX, centerY, radius, font, sf, pen);
-                DrawSegmentLabel(g, totalExcused.ToString(), anglePresent + angleAbsent + angleExcused + angleSick / 2, centerX, centerY, radius, font, sf, pen);
-                DrawSegmentLabel(g, totalSick.ToString(), anglePresent + angleAbsent + angleExcused + angleSick + angleFree / 2, centerX, centerY, radius, font, sf, pen);
-                DrawSegmentLabel(g, totalRespectful.ToString(), anglePresent + angleAbsent + angleExcused + angleSick + angleFree + angleRespectful / 2, centerX, centerY, radius, font, sf, pen);
             }
         }
 

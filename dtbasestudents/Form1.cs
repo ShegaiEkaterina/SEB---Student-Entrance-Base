@@ -256,19 +256,10 @@ namespace dtbasestudents
 
                 this.Text = "[SEB] Student Entrance Base" + " - " + usernameOrEmail + " - " + email + " - " + role + " - " + group + " - " + school + " - " + schoolyear;
 
-                if (role == "Родитель")
-                {
-                    menuItem12.Visible = false;
-                    menuItem14.Visible = false;
-                    menuItem5.Visible = false;
-                    menuItem7.Visible = false;
-                    statusBar1.Text = "Вы вошли как родитель";
-                }
-
                 menuItem3.Visible = false;
                 menuItem4.Visible = false;
                 menuItem10.Visible = false;
-                statusBar1.Text = "Вы вошли как" + role;
+                statusBar1.Text = "Вы вошли как " + role;
             }
         }
 
@@ -451,15 +442,6 @@ namespace dtbasestudents
 
                 menuItem8.Text = usernameOrEmail;
                 menuItem9.Text = email;
-
-                if (role == "Родитель")
-                {
-                    menuItem12.Visible = false;
-                    menuItem14.Visible = false;
-                    menuItem5.Visible = false;
-                    menuItem7.Visible = false;
-                    statusBar1.Text = "Вы вошли как родитель";
-                }
 
                 menuItem3.Visible = false;
                 menuItem4.Visible = false;
